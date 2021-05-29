@@ -35,5 +35,15 @@ export default {
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extend(config, ctx) {},
+    babel: {
+      compact: true,
+      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
+    },
+  },
+
+  server: {
+    port: 8080,
+  },
 }
