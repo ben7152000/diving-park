@@ -11,20 +11,11 @@ export default {
   components: {
     SwiperSide,
   },
-  data() {
-    return {
-      items: [
-        {
-          bgImgSrc: 'https://picsum.photos/1024/240/?image=10',
-        },
-        {
-          bgImgSrc: 'https://picsum.photos/1024/240/?image=12',
-        },
-        {
-          bgImgSrc: 'https://picsum.photos/1024/240/?image=22',
-        },
-      ],
-    }
+  props: {
+    items: {
+      type: Array,
+      required: true,
+    },
   },
 }
 </script>

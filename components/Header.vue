@@ -11,10 +11,11 @@ export default {
   components: {
     Logo,
   },
-  data() {
-    return {
-      logo: 'Diving Park',
-    }
+  props: {
+    logo: {
+      type: String,
+      required: true,
+    },
   },
 }
 </script>

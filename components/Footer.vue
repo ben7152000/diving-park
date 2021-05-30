@@ -12,10 +12,11 @@ export default {
   components: {
     Copyright,
   },
-  data() {
-    return {
-      copyright: 'Copyright © 2021 Made With By Diving Park',
-    }
+  props: {
+    copyright: {
+      type: String,
+      required: true,
+    },
   },
 }
 </script>
