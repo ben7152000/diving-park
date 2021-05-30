@@ -21,6 +21,7 @@
 
 <script>
 import Checkbox from './Components/Checkbox'
+
 export default {
   name: 'FilterCondition',
   components: {

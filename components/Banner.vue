@@ -6,6 +6,7 @@
 
 <script>
 import SwiperSide from './Components/SwiperSide'
+
 export default {
   name: 'Banner',
   components: {

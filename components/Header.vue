@@ -6,6 +6,7 @@
 
 <script>
 import Logo from './Components/Logo'
+
 export default {
   name: 'Header',
   components: {
