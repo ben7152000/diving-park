@@ -9,6 +9,13 @@
       :options="condition.options"
     />
     <h6 class="subtitle">高級選項</h6>
+    <Checkbox
+      v-for="(advancedCondition, index) in advancedConditions"
+      :key="index"
+      :collapse="advancedCondition.collapse"
+      :label="advancedCondition.label"
+      :options="advancedCondition.options"
+    />
   </div>
 </template>
 
@@ -21,6 +28,10 @@ export default {
   },
   props: {
     conditions: {
+      type: Array,
+      required: true,
+    },
+    advancedConditions: {
       type: Array,
       required: true,
     },

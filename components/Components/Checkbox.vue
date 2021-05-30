@@ -5,8 +5,9 @@
       :aria-expanded="visible ? 'true' : 'false'"
       :aria-controls="collapse"
       @click="visible = !visible"
-      >{{ label }}</b-button
     >
+      {{ label }}
+    </b-button>
     <b-collapse :id="collapse" v-model="visible" class="mt-2">
       <b-card>
         <b-form-group v-slot="{ ariaDescribedby }">

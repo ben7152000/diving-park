@@ -2,7 +2,10 @@
   <div>
     <Header :logo="logo" />
     <Banner :items="items" />
-    <FilterCondition :conditions="conditions" />
+    <FilterCondition
+      :conditions="conditions"
+      :advanced-conditions="advancedConditions"
+    />
     <Footer :copyright="copyright" />
   </div>
 </template>
@@ -58,6 +61,28 @@ export default {
             { text: '初級潛水員證照 (OW)', value: '初級潛水員證照' },
             { text: '進階潛水員證照 (AOW)', value: '進階潛水員證照' },
             { text: '救援潛水員證照', value: '救援潛水員證照' },
+          ],
+        },
+      ],
+      advancedConditions: [
+        {
+          collapse: '1',
+          label: '廁所',
+          options: [{ text: '有', value: '有' }],
+        },
+        {
+          collapse: '2',
+          label: '盥洗',
+          options: [{ text: '有', value: '有' }],
+        },
+        {
+          collapse: '3',
+          label: '最大深度',
+          options: [
+            { text: '0~10 米', value: '0~10 米' },
+            { text: '11~20 米', value: '11~20 米' },
+            { text: '21~30 米', value: '21~30 米' },
+            { text: '31~40 米', value: '31~40 米' },
           ],
         },
       ],
