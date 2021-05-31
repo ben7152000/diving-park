@@ -1,5 +1,10 @@
 <template>
-  <b-card-img :src="image" alt="Image" class="rounded-0" />
+  <b-card-img
+    :src="image"
+    alt="Image"
+    class="rounded-0"
+    style="width: 250px; height: 250px"
+  />
 </template>
 
 <script>

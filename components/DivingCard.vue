@@ -1,10 +1,14 @@
 <template>
-  <b-card no-body class="overflow-hidden" style="max-width: 500px">
+  <b-card
+    no-body
+    class="overflow-hidden"
+    style="max-width: 100%; margin-bottom: 10px"
+  >
     <b-row no-gutters>
-      <b-col md="6">
+      <b-col md="4">
         <DivingImage :image="image" />
       </b-col>
-      <b-col md="6">
+      <b-col md="8">
         <b-card-body :title="title">
           <DivingText
             :description="description"

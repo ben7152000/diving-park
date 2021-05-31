@@ -1,12 +1,13 @@
 <template>
   <div>
     <Header :logo="logo" />
-    <Banner :items="items" />
-    <FilterCondition
-      :conditions="conditions"
-      :advanced-conditions="advancedConditions"
-    />
-    <DivingCards :diving-data="divingData" />
+    <Banner class="mb-5" :items="items" />
+    <div class="container my-4">
+      <div class="row">
+        <FilterCondition class="col-3 border rounded-0" style="height: 100%" />
+        <DivingCards class="col-9" :diving-data="divingData" />
+      </div>
+    </div>
     <Footer :copyright="copyright" />
   </div>
 </template>
@@ -48,115 +49,64 @@ export default {
         },
       ],
 
-      // filter conditions
-      conditions: [
-        {
-          collapse: '1',
-          label: '地點',
-          options: [{ text: '北部', value: '北部' }],
-        },
-        {
-          collapse: '2',
-          label: '難易度',
-          options: [
-            { text: '低', value: '低' },
-            { text: '中', value: '中' },
-            { text: '高', value: '高' },
-          ],
-        },
-        {
-          collapse: '3',
-          label: '擁有證照',
-          options: [
-            { text: '初級潛水員證照 (OW)', value: '初級潛水員證照' },
-            { text: '進階潛水員證照 (AOW)', value: '進階潛水員證照' },
-            { text: '救援潛水員證照', value: '救援潛水員證照' },
-          ],
-        },
-      ],
-
-      // filter advanced conditions
-      advancedConditions: [
-        {
-          collapse: '1',
-          label: '廁所',
-          options: [{ text: '有', value: '有' }],
-        },
-        {
-          collapse: '2',
-          label: '盥洗',
-          options: [{ text: '有', value: '有' }],
-        },
-        {
-          collapse: '3',
-          label: '最大深度',
-          options: [
-            { text: '0~10 米', value: '0~10 米' },
-            { text: '11~20 米', value: '11~20 米' },
-            { text: '21~30 米', value: '21~30 米' },
-            { text: '31~40 米', value: '31~40 米' },
-          ],
-        },
-      ],
-
       // diving cards
       divingData: [
         {
-          image: 'https://picsum.photos/400/400/?image=20',
+          image: 'https://picsum.photos/250/250/?image=20',
           title: '龍洞四號',
           description: '適合新手, 生物多樣, 豐富地形, 商家林立, 停車方便',
           maxDepth: '26',
           visibility: '1~8',
           location: '北部',
-          degree: '低',
+          degree: '簡單',
           license: ['初級潛水員證照', '進階潛水員證照', '救援潛水員證照'],
           toilet: true,
           bathroom: true,
         },
         {
-          image: 'https://picsum.photos/400/400/?image=21',
+          image: 'https://picsum.photos/250/250/?image=21',
           title: '潮境公園',
           description: '適合進階, 生物多樣, 豐富地形, 停車方便, 海底景觀豐富',
           maxDepth: '29',
           visibility: '1~8',
           location: '北部',
-          degree: '中',
+          degree: '普通',
           license: ['初級潛水員證照', '進階潛水員證照', '救援潛水員證照'],
           toilet: true,
           bathroom: true,
         },
         {
-          image: 'https://picsum.photos/400/400/?image=22',
+          image: 'https://picsum.photos/250/250/?image=22',
           title: '82.5k',
           description: '適合進階, 生物多樣, 停車位少, 上下岸不方便',
           maxDepth: '23',
           visibility: '1~10',
           location: '北部',
-          degree: '中',
+          degree: '普通',
           license: ['初級潛水員證照', '進階潛水員證照', '救援潛水員證照'],
           toilet: false,
           bathroom: false,
         },
         {
-          image: 'https://picsum.photos/400/400/?image=23',
+          image: 'https://picsum.photos/250/250/?image=23',
           title: '鼻頭角',
           description: '適合進階, 生物多樣, 停車位少, 上下岸不方便',
           maxDepth: '23',
           visibility: '1~10',
           location: '北部',
-          degree: '中',
+          degree: '普通',
           license: ['初級潛水員證照', '進階潛水員證照', '救援潛水員證照'],
           toilet: true,
           bathroom: false,
         },
         {
-          image: 'https://picsum.photos/400/400/?image=24',
+          image: 'https://picsum.photos/250/250/?image=24',
           title: '蝙蝠洞',
           description: '適合進階, 生物多樣, 停車位少, 上下岸不方便',
           maxDepth: '23',
           visibility: '1~10',
           location: '北部',
-          degree: '中',
+          degree: '普通',
           license: ['初級潛水員證照', '進階潛水員證照', '救援潛水員證照'],
           toilet: true,
           bathroom: false,

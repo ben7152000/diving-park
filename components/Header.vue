@@ -1,7 +1,5 @@
 <template>
-  <div class="header">
-    <Logo :logo="logo" />
-  </div>
+  <Logo :logo="logo" />
 </template>
 
 <script>
@@ -20,5 +18,3 @@ export default {
   },
 }
 </script>
-
-<style scoped lang="scss"></style>

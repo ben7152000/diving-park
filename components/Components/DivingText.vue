@@ -6,6 +6,8 @@
     <br />
     地點 : {{ location }}
     <br />
+    難易度 : {{ degree }}
+    <br />
     廁所 :
     <span v-if="toilet">有</span>
     <span v-else>無</span>

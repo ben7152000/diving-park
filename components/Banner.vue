@@ -1,7 +1,5 @@
 <template>
-  <div class="banner">
-    <SwiperSide :items="items" />
-  </div>
+  <SwiperSide :items="items" />
 </template>
 
 <script>
